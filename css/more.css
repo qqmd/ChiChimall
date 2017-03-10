@@ -1,0 +1,59 @@
+div.footer
+{
+	/*background:url(../images/footerBg.jpg) no-repeat;*/
+	margin:20px auto 0;
+	background:#dcdcdc;
+}
+div.footer div.innerfooter
+{
+	width:1225px;
+	margin:0 auto;
+	padding:20px 0;
+}
+div.footer ul
+{
+	float:left;
+	margin-right:17px;
+	text-indent:46px;
+	width:187px;
+}
+div.footer ul li
+{
+	line-height:29px;
+}
+div.footer ul li a
+{
+	color:#4c4c4c;
+	font-size:14px;
+
+}
+div.footer ul.about
+{
+	background:url(../images/house2.jpg) no-repeat 0 0;
+	/*padding-left:78px;*/
+}
+div.footer ul.new
+{
+	background:url(../images/plane.jpg) no-repeat 0 0;
+}
+div.footer ul.money
+{
+	background:url(../images/money.jpg) no-repeat 0 0;
+}
+div.footer ul.car
+{
+	background:url(../images/car1.jpg) no-repeat 0 0;
+}
+div.footer ul.shou
+{
+	background:url(../images/austin.jpg) no-repeat 0 0;
+}
+div.footer ul.phone
+{
+	background:url(../images/phone.jpg) no-repeat 0 0;
+}
+div.footer ul.phone
+{
+	margin-right:0;
+}
+p.shangbiao{text-align:center;background:#4c3598;line-height:40px;}

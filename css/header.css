@@ -1,0 +1,28 @@
+div.mainTop
+{
+	position:relative;
+	width:1225px;
+	margin:0 auto;
+}
+div.top
+{
+	width:1225px;
+	
+	position:absolute;
+		top:0;
+		left:0;
+}
+
+div.logo
+{
+		padding-top:17px;
+		overflow:hidden;
+}
+div.logo a
+{
+	float:left;
+	width:419px;
+	margin-top:18px;
+	
+}
+

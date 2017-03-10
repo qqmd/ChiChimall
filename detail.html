@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/more.css"/>
+<style type="text/css">
+
+    /*jqzoom*/
+    .jqzoom{position:relative;padding:0;float:left;}
+.zoomdiv{z-index:100;position:absolute;top:1px;left:0px;width:400px;height:400px;background:url(i/loading.gif) #fff no-repeat center center;border:1px solid #e4e4e4;display:none;text-align:center;overflow: hidden;}
+.bigimg{width:1000px;height:1000px;}
+.jqZoomPup{z-index:10;visibility:hidden;position:absolute;top:0px;left:0px;width:50px;height:50px;border:1px solid #aaa;background:#fff 50% top no-repeat;opacity:0.5;-moz-opacity:0.5;-khtml-opacity:0.5;filter:alpha(Opacity=50);cursor:move;}
+    .list-h img{ width:111px; height:70px; padding: 2px;}
+
+
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<!--<script type="text/javascript" src="js/jquery.jqzoom.js"></script>
+<script type="text/javascript" src="js/jquery.slider.js"></script>-->
+<script type="text/javascript">
+$(function(){
+	$("#spec-list img").hover(function(){
+		var src=$(this).attr("src");
+		$("#spec-n1 img").attr({"src":src,"jqimg":src});
+		$(this).addClass("borderImg");
+	},function(){
+		$(this).removeClass("borderImg");
+	})
+	$(".jqzoom").jqueryzoom({
+		xzoom:350,
+		yzoom:400,
+		offset:10,
+		position:"right",
+		preload:1,
+		lens:1
+	});
+				
+	$("#spec-list").slider({
+		//slider:".list-m",
+		autoPlay:false
+	});
+})
+</script>
+</head>
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" media="screen" href="css/style.css">
+
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+<!--/*<script src="js/dd_png-min.js" type="text/javascript"></script>*/-->
+<!--[if IE 6]>  
+    <script type="text/javascript" src="js/dd_png-min.js"></script>  
+    <script type="text/javascript">  
+    	DD_belatedPNG.fix('.a1');  
+    </script>  
+<![endif]-->
+<body>
+<div class="mainTop">
+        <div class="top detailTop clearfix">
+			<div class="innerTop clearfix">
+				<span class="dizhi">送至:<a href="#" class="beijing">北京</a></span>
+				<div class="right">
+					<span>欢迎来到集智</span>
+					<a>请登录</a>
+					<a href="#">免费注册</a>
+					<a href="#">我的集智</a>
+					<a href="#">购物车</a>
+					<a href="#">收藏夹</a>
+					<a href="#">我的订单</a>
+					<a href="#">客户服务</a>
+					<!-- <form class="clearfix">
+						<input type="button" name="car" value="购物车(0)" class="car"/>
+					</form> -->
+				</div>
+			</div>
+			<div class="logo clearfix">
+				<a href="#" class="logo"><img src="images/logoLast.png" /></a>
+				<!--<a href="#" class="carIcon"></a>-->
+				<form>
+                	<input type="text" name="car" class="search"/>
+                	<input type="button" name="search" value="" class="fdj"/>
+				</form>
+			</div>
+			<ul class="nav clearfix">
+				<li class="li1 top">
+					<span class="active"></span>
+					<a href="#">商品分类</a>
+				</li>
+				<!-- <li class="lzx"><span></span></li> -->
+				<li class="li2 bottom">
+					<span></span>
+					<a href="#">爆款</a>
+				</li>
+				<!-- <li class="rzx"><span></span></li> -->
+				<li class="li2 top">
+					<span></span>
+					<a href="#">特惠</a>
+				</li>
+				<!-- <li class="lzx"><span></span></li> -->
+				<li class="li2 bottom">
+					<span></span>
+					<a href="#">团购</a>
+				</li>
+				<!-- <li class="rzx"><span></span></li> -->
+				<li class="li1 top">
+					<span></span>
+					<a href="#">电子资讯</a>
+				</li>
+				<!-- <li class="lzx"><span></span></li> -->
+				<li class="li1 bottom">
+					<span></span>
+					<a href="#">用户社区</a>
+				</li>
+				<!-- <li class="rzx"><span></span></li> -->
+				<li class="li1 top">
+					<span></span>
+					<a href="#">评测中心</a>
+				</li>
+			</ul>
+		</div>
+</div>
+<p class="fenlei">
+	   		<a href="#">首页</a>
+	   		>
+	   		<a href="#">Lenovo PC</a>
+	   		>
+	   		<a href="#">I2000</a>
+	   		>
+	   		<a href="#" class="biaoti">小新出色版I2000 IRIS -慕斯白</a>
+</p>
+   <div class="detailMiddle  clearfix" id="preview">
+	   	<div class="detailsmLeft clearfix">
+            <div id="spec-list">
+                <ul class="list-h">
+                    <li class="tm">
+                        <a href="#"><img name="images/img01.jpg" alt="" src="images/img01.jpg"/></a>
+                    </li>
+                    <li class="tm">
+                        <a href="#"><img name="images/img02.jpg" src="images/img02.jpg"/></a>
+                    </li>
+                    <li>
+                        <a href="#"><img name="images/img03.jpg" src="images/img03.jpg"/></a>
+                    </li>
+                    <li class="tm">
+                        <a href="#"><img name="images/img04.jpg" src="images/img04.jpg"/></a>
+                    </li>
+                    <li class="tm">
+                        <a href="#"><img name="images/img05.jpg" src="images/img05.jpg"/></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="jqzoom" id="spec-n1">
+                <img width="568" height="376" jqimg="images/img01.jpg" src="images/img01.jpg"/>
+            </div>
+            <span class="fl">商品编号80QT0004CD</span>
+            <span class="fr">
+                <a href="#" class="share">分享</a>
+                <a href="#" class="collect">收藏</a>
+            </span>
+		</div>
+		<div class="detailsmRight">
+			<ul class="sketch">
+				<li><a href="#" class="bigWord">小新出色版I2000 IRIS -慕斯白</a></li>
+				<li><a href="#">双核处理器i7-5557U 3.1GHz</a></li>
+				<li><a href="#">Windows 8.1</a></li>
+				<li><a href="#">4G DDR3L/ 500G Hybrid硬盘（内置8G SSD高速缓存）</a></li>
+				<li><a href="#">14.0英寸，HD LED</a></li>
+				<li><a href="#">每个ID、收货地址限购1台。</a></li>			
+			</ul>
+			<div class="price clearfix">
+				<div class="priceLeft">
+					<span class="outsideNum">会员价:<span class="num">￥4199</span></span>
+					<del>媒体价:￥4499</del>
+
+				</div>
+				<span class="zhixian"></span>
+				<div class="priceRight clearfix">
+					<span>评价&nbsp;<a href="#">12</a></span>
+					<span class="sales">销量&nbsp;<a href="#">34</a></span>
+				</div>
+			</div>
+			<ul class="btnBuy">
+				<li class="car clearfix">
+					<a href="#" class="addCar">加入购物车</a>
+					<a href="#" class="buyNow">立即购买</a>
+				</li>
+				<li class="color clearfix">
+					<span>选择颜色:</span>
+					<a href="#" class="pitch">慕斯白</a>
+					<a href="#">夏日橙</a>
+					<a herf="#">金属灰</a>
+				</li>
+				<li class="num clearfix">
+					<span>数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量:</span>
+					<a class="minus" href="#">-</a>
+					<a href="#" class="one">1</a>
+					<a herf="#" class="plus">+</a>
+				</li>
+				<li class="store">
+					<span class="store">库&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;存:</span>
+					<span>少量库存</span>
+				</li>
+				<li class="clearfix">
+					<span class="service">选择服务:</span>
+					<ul class="innerBuy">
+						<li><a href="#">联想笔记本延长1年保修&nbsp;&nbsp;￥289.00</a></li>
+						<li><a href="#">联想笔记本延长1年保修&nbsp;&nbsp;￥289.00</a></li>
+						<li><a href="#">联想笔记本延长1年保修&nbsp;&nbsp;￥289.00</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+   </div>
+   <div class="outScan clearfix">
+	   <div class="scan">
+			<p>看了又看</p>
+			<dl>
+				<dt><a href="#"><img src="images/img8.jpg"/></a></dt>
+				<dd><a herf="#">￥4499</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#"><img src="images/img9.jpg"/></a></dt>
+				<dd><a href="#">￥4499</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#"><img src="images/img9.jpg"/></a></dt>
+				<dd><a href="#">￥4499</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#"><img src="images/img9.jpg"/></a></dt>
+				<dd><a href="#">￥4499</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#"><img src="images/img9.jpg"/></a></dt>
+				<dd><a href="#">￥4499</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#"><img src="images/img9.jpg"/></a></dt>
+				<dd><a href="#">￥4499</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#"><img src="images/img9.jpg"/></a></dt>
+				<dd><a href="#">￥4499</a></dd>
+			</dl>
+			<dl>
+				<dt><a href="#"><img src="images/img9.jpg"/></a></dt>
+				<dd><a href="#">￥4499</a></dd>
+			</dl>
+		</div>
+		<div class="scanRight">
+			<ul class="ul1Scan">
+				<li>
+					<a href="#" class="active">产品参数</a>
+				</li>
+				<li>
+					<a href="#">产品规格</a>
+				</li>
+				<li>
+					<a href="#">全部评论</a>
+				</li>
+				<li>
+					<a href="#">晒单</a>
+				</li>
+			</ul>
+			<div class="messageScan clearfix">
+				<ul class="ul2Scan">
+					<li>品牌名称：Lenovo/联想</li>
+					<li>产品名称：Lenovo/联想小新出色版</li>
+					<li>品牌: Lenovo/联想</li>
+					<li>品牌名称：Lenovo/联想</li>
+				</ul>
+				<ul>
+					<li>显卡型号: Intel GMA HD 4600</li>
+					<li>CPU平台: Core/酷睿 i7</li>
+					<li>型号: I2000</li>
+				</ul>
+				<ul>
+					<li>显存容量: 共享内存容量机械</li>
+					<li>显卡类型: 集成显卡集成</li>
+					<li>机械硬盘容量: 500GB</li>
+				</ul>
+				<ul>
+					<li>硬盘容量: 500GB </li>
+					<li>屏幕尺寸: 14英寸 </li>
+					<li>内存容量: 4GB</li>
+				</ul>
+			</div>
+			<div class="scanBottom">
+				<h3>产品详情</h3>
+				<h3 class="productScan">PRODUCT DETAIL</h3>
+				<img src="images/detailImg.jpg"/>
+			</div>
+		</div>
+	</div>
+    <div class="footer clearfix">
+		<div class="innerfooter clearfix">
+			<ul class="about">
+				<li><a href="#">关于集智</a></li>
+				<li><a href="#">品牌入驻</a></li>
+				<li><a href="#">正品保障</a></li>
+				<li><a href="#">友情链接</a></li>
+			</ul>
+			<ul class="new">
+				<li><a href="#">新手指南</a></li>
+				<li><a href="#">新用户注册</a></li>
+				<li><a href="#">如何购买</a></li>
+				<li><a href="#">优惠券使用</a></li>
+			</ul>
+			<ul class="money">
+				<li><a href="#">支付方式</a></li>
+				<li><a href="#">在线支付</a></li>
+				<li><a href="#">银行转账</a></li>
+				<li><a href="#">发票制度</a></li>
+			</ul>
+			<ul class="car">
+				<li><a href="#">配送方式</a></li>
+				<li><a href="#">配送收费标准</a></li>
+				<li><a href="#">货到付款范围</a></li>
+			</ul>
+			<ul class="shou">
+				<li><a href="#">集智售后</a></li>
+				<li><a href="#">退换货政策</a></li>
+				<li><a href="#">如何办理退换货</a></li>
+				<li><a href="#">订单跟踪</a></li>
+			</ul>
+			<ul class="phone">
+				<li><a href="#">客服热线</a></li>
+				<li><a href="#">4006-500-500</a></li>
+			</ul>
+		</div>
+	</div>
+    <p class="shangbiao">© 2003-2015 TMALL.COM 版权所有</p>
+</div>
+    <script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

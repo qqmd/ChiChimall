@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/more.css"/>
+<link rel="stylesheet" type="text/css" href="css/header.css"/>
+</head>
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+    /*$(function(){
+       $(".tb a").mouseover(function(){
+       	clearInterval(moveId);
+       		i=$(this).index();
+       		$(".smBanner a img").eq($(this).index()).show().parent().siblings().children("img").hide();
+       		$(this).addClass("ase").siblings().removeClass("ase");
+
+    }).mouseout(function(){
+    	moveId=setInterval(move,2000);
+    })
+       var i=0;
+       function move(){
+       		i++;
+       		if(i>($(".smBanner a img").size()-1))
+       		{
+       			i=0;
+       		}
+       		$(".smBanner a img").eq(i).show().parent().siblings().children("img").hide();
+       		$(".tb a").eq(i).addClass("ase").siblings().removeClass("ase");
+       	}
+    var moveId=setInterval(move,2000)*/
+	$(function(){
+       $(".tb a").mouseover(function(){
+       		clearInterval(moveId);
+       		i=$(this).index();
+			/*i=j;*/
+       		/*$(".smBanner a img").eq($(this).index()).show().parent().siblings().children("img").hide();*/
+       		$(this).addClass("ase").siblings().removeClass("ase");
+			smBox.stop().animate({"left":-imgWidth*i});
+
+    }).mouseout(function(){
+    	moveId=setInterval(move,2000);
+    })
+	/*var imgSize=$(".smBanner a img").size();*/
+	var a=$(".smBanner a");
+	var imgSize=$(".smBanner a img").size();
+	var imgWidth=$(".smBanner a img").width();
+	var smBox=$(".smBanner");
+	smBox.width(imgWidth*imgSize);
+       var i=0;
+	   var j=0;
+       function move(){
+       		i++;
+			j++;
+			if(j>(imgSize-1)){j=0;}
+			$(".tb a").eq(j).addClass("ase").siblings().removeClass("ase");
+			smBox.animate({"left":-imgWidth*i},function(){
+				a.first().appendTo(smBox);
+				a=$(".smBanner a");
+				
+				smBox.css("left",0);
+				i=0;
+				});
+       	}
+    var moveId=setInterval(move,2000)
+	
+    $(window).scroll(function(){
+		if($(window).scrollTop()>=$(".top").height()){
+			$(".goTop").addClass("nn").show();
+			}
+		else{
+			$(".goTop").addClass("nn").hide();
+			}
+	})
+	$(".goTop").click(function(){
+		$(window).scrollTop(0);
+	})
+	$(function(){
+		$(".search").Watermark("请输入您想搜索的商品名称");  
+	})
+    })
+</script>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" media="screen" href="css/style.css">
+<script src="js/dd_png-min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../电子商城作业 - 副本 (3)/js/jquery.watermarkinput.js"></script>
+<body>
+	<div class="container clearfix">
+		<div id="particles-js">
+        	<div class="mainTop">
+        	<div class="top clearfix">
+			<div class="innerTop clearfix">
+				<span class="dizhi">送至:<a href="#" class="beijing">北京</a></span>
+				<div class="right">
+					<span>欢迎来到集智</span>
+					<a>请登录</a>
+					<a href="#">免费注册</a>
+					<a href="#">我的集智</a>
+                    <a href="#">购物车</a>
+					<a href="#">收藏夹</a>
+                    <a href="#">我的订单</a>
+					<a href="#">客户服务</a>
+				</div>
+			</div>
+			<div class="logo clearfix">
+				<a href="#"><img src="images/logoLast.png" /></a>
+				
+				<!-- <form class="clearfix">
+						<input type="button" name="car" value="购物车(0)" class="car"/>
+				</form> -->
+				<!-- <a href="#" class="carIcon"></a> -->
+				<form>
+                	<input type="text" name="car" class="search"/>
+                	<input type="button" name="search" value="" class="fdj"/>
+				</form>
+			</div>
+			<ul class="nav clearfix">
+				<li class="li1 top">
+					<span class="active"></span>
+					<a href="#">商品分类</a>
+				</li>
+				<!-- <li class="lzx"><span></span></li> -->
+				<li class="li2 bottom">
+					<span></span>
+					<a href="#">爆款</a>
+				</li>
+				<!-- <li class="rzx"><span></span></li> -->
+				<li class="li2 top">
+					<span></span>
+					<a href="#">特惠</a>
+				</li>
+				<!-- <li class="lzx"><span></span></li> -->
+				<li class="li2 bottom">
+					<span></span>
+					<a href="#">团购</a>
+				</li>
+				<!-- <li class="rzx"><span></span></li> -->
+				<li class="li1 top">
+					<span></span>
+					<a href="#">电子资讯</a>
+				</li>
+				<!-- <li class="lzx"><span></span></li> -->
+				<li class="li1 bottom">
+					<span></span>
+					<a href="#">用户社区</a>
+				</li>
+				<!-- <li class="rzx"><span></span></li> -->
+				<li class="li1 top">
+					<span></span>
+					<a href="#">评测中心</a>
+				</li>
+			</ul>
+	</div>
+    </div>
+    </div>
+
+	<div class="banner">
+		<!--<div class="bigBanner">-->
+			<div class="smBanner">
+				<a href="#"><img src="images/banner1.jpg"/></a>
+				<a href="#"><img src="images/banner2.jpg"/></a>
+				<a href="#"><img src="images/banner3.jpg"/></a>
+			</div>
+		<!--</div>-->
+		<div class="tb">
+			<a href="#" class="ase"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+            
+	  </div>
+        <p class="lineDw"></p>
+	</div>
+    
+	<div class="middle">
+    	<div class="like clearfix">
+        	<span href="#" class="leftArrows"><img src="images/leftArrows.jpg"/></span>
+            <dl>
+                <dt><a href="#"><img src="images/like01.jpg"/></a></dt>
+                <dd class="wd1"><a href="#">YOGA平板2 64G-WiFi版 </a></dd>
+                <dd class="wd3">标配蓝牙键盘</dd>
+                <dd class="wd2"><a href="#">￥4490</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#"><img src="images/like02.jpg"/></a></dt>
+                 <dd class="wd1"><a href="#">YOGA平板2 64G-WiFi版 </a></dd>
+                <dd class="wd3">标配蓝牙键盘</dd>
+                <dd class="wd2"><a href="#">￥4490</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#"><img src="images/like03.jpg"/></a></dt>
+                <dd class="wd1"><a href="#">YOGA平板2 64G-WiFi版 </a></dd>
+                <dd class="wd3">标配蓝牙键盘</dd>
+                <dd class="wd2"><a href="#">￥4490</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#"><img src="images/like04.jpg"/></a></dt>
+                <dd class="wd1"><a href="#">YOGA平板2 64G-WiFi版 </a></dd>
+                <dd class="wd3">标配蓝牙键盘</dd>
+                <dd class="wd2"><a href="#">￥4490</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#"><img src="images/like05.jpg"/></a></dt>
+                <dd class="wd1"><a href="#">YOGA平板2 64G-WiFi版 </a></dd>
+                <dd class="wd3">标配蓝牙键盘</dd>
+                <dd class="wd2"><a href="#">￥4490</a></dd>
+            </dl>
+            <span href="#" class="rightArrows"><img src="images/rightArrows.jpg"/></span>
+        </div>
+		<div class="mtop clearfix">
+			<div class="smtop clear1fix">
+				<h2 class="chaozhi"><img src="images/h1.jpg"/></h2>
+				<ul class="ul1 clearfix">
+					<li class="li3"><a href="#" class="active">全部</a></li>
+					<li class="li2"><a href="#">电脑</a></li>
+					<li class="li2"><a href="#">手机</a></li>
+					<li class="li2"><a href="#">手机配件</a></li>
+					<li class="li1"><a href="#">数码产品</a></li>
+					<li class="li1"><a href="#">数码配件</a></li>
+					<li class="li1"><a href="#">电脑配件</a></li>
+					<li class="li1"><a href="#">网络产品</a></li>
+				</ul>
+			</div>
+			<div class="smmiddle">
+				<div class="oneTop clearfix">
+					<dl class="dl1">
+						<dt><a href="#"><img src="images/img7.jpg" /></a></dt>
+						<dd>
+							<a class="word1" href="#">ININKPAD  E450 I5-4300...</a>
+							<a class="word2" href="#">学生价3699元，精选福袋...</a>
+							<a class="word3" href="#">抢购价:￥<span>3699</span></a>
+							<!-- <input type="button" name="but1" value="立即抢购"/> -->
+						</dd>
+					</dl>
+					<!-- <span class="imgBg"><span> -->
+					<dl class="dl2">
+						<dt><a href="#"><img src="images/img2.jpg" /></a></dt>
+						<dd>
+							<a class="word1" href="#">ININKPAD  E450 I5-4300...</a>
+							<a class="word2" href="#">学生价3699元，精选福袋...</a>
+							<a class="word3" href="#">抢购价:￥<span>4699</span></a>
+							<!-- <input type="button" name="but1" value="立即抢购"/> -->
+						</dd>
+					</dl>
+				</div>
+				<div class="oneBottom clearfix">
+					<div class="innerLeft">
+						<ul class="ul2">
+							<li class="li1"><a href="#">乐檬&nbsp;K30-T 移动版&nbsp;典雅黄</a></li>
+							<li class="li2"><a href="#">买即送精美手机壳</a></li>
+							<li class="li3"><a href="#">抢购价:￥</a><span>599</span></li>
+						</ul>
+						<div class="innerBottom">
+							<a class="ccar"></a>			
+							<a href="#" class="phone1"><img src="images/img06.jpg" /></a>
+							<a class="sc"></a>
+						</div>
+					</div>
+					<div class="innerLeft">
+						<ul class="ul2">
+							<li class="li1"><a href="#">乐檬&nbsp;K30-T 移动版&nbsp;典雅黄</a></li>
+							<li class="li2"><a href="#">买即送精美手机壳</a></li>
+							<li class="li3"><a href="#">抢购价:￥</a><span>599</span></li>
+						</ul>
+						<div class="innerBottom">
+							<a class="ccar"></a>
+							<a href="#" class="phone1"><img src="images/img06.jpg" /></a>
+							<a class="sc"></a>
+						</div>
+					</div>
+					<div class="innerLeft">
+						<ul class="ul2">
+							<li class="li1"><a href="#">乐檬&nbsp;K30-T 移动版&nbsp;典雅黄</a></li>
+							<li class="li2"><a href="#">买即送精美手机壳</a></li>
+							<li class="li3"><a href="#">抢购价:￥</a><span>599</span></li>
+						</ul>
+						<div class="innerBottom">
+							<a class="ccar"></a>
+							<a href="#" class="phone1"><img src="images/img06.jpg" /></a>
+							<a class="sc"></a>
+						</div>
+					</div>
+					<div class="innerLeft">
+						<ul class="ul2">
+							<li class="li1"><a href="#">乐檬&nbsp;K30-T 移动版&nbsp;典雅黄</a></li>
+							<li class="li2"><a href="#">买即送精美手机壳</a></li>
+							<li class="li3"><a href="#">抢购价:￥</a><span>599</span></li>
+						</ul>
+						<div class="innerBottom">
+							<a class="ccar"></a>
+							<a href="#" class="phone1"><img src="images/img06.jpg" /></a>
+							<a class="sc"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="more">查看更多</a>
+		</div>
+		<div class="mmiddle">
+			<div class="twoTop clearfix">
+				<!--<ul class="twoH3 clearfix">
+					<li><a href="#" class="active">电脑产品</a></li>
+					<li><a href="#">手机产品</a></li>
+					<li><a href="#">数码产品</a></li>
+				</ul>-->
+                <h2 class="product"><img src="images/product.jpg"/></h2>
+				<a href="#" class="many">更多</a>
+			</div>
+			<div class="twobottom clearfix">
+				<dl class="twoDl1">
+					<dt><a href="#"><img src="images/img12.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img14.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img10.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl1 twoDl3">
+					<dt><a href="#"><img src="images/img16.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl1">
+					<dt><a href="#"><img src="images/img12.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img14.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img10.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl1 twoDl3">
+					<dt><a href="#"><img src="images/img16.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="mmiddle clearfix">
+			<div class="twoTop clearfix">
+				<!--<ul class="twoH3 clearfix">
+					<li><a href="#" class="active">电脑产品</a></li>
+					<li><a href="#">手机产品</a></li>
+					<li><a href="#">数码产品</a></li>
+				</ul>-->
+                <h2 class="product"><img src="images/product.jpg"/></h2>
+				<a href="#" class="many">更多</a>
+			</div>
+			<div class="twobottom">
+				<dl class="twoDl1">
+					<dt><a href="#"><img src="images/img15.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img09.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img08.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl1 twoDl3">
+					<dt><a href="#"><img src="images/img07.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl1">
+					<dt><a href="#"><img src="images/img15.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img09.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl2">
+					<dt class="clearfix"><a href="#" class="circle"><img src="images/img08.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+				<dl class="twoDl1 twoDl3">
+					<dt><a href="#"><img src="images/img07.jpg"/></a></dt>
+					<dd class="clearfix">
+						<a href="#" class="juse">￥3799.00</a>
+						<a href="#" class="word">Lenovo/联想 G510AM -IFI
+15.6寸i5超薄游戏笔记本电脑</a>
+						<a href="#" class="tp1"></a>
+						<a href="#" class="tp2"></a>
+						<a href="#" class="tp3"></a>
+					</dd>
+				</dl>
+			</div>
+        <div class="zxj">
+            <div class="twoTop clearfix">
+				<!--<ul class="twoH3 clearfix">
+					<li><a href="#" class="active">电脑产品</a></li>
+					<li><a href="#">手机产品</a></li>
+					<li><a href="#">数码产品</a></li>
+				</ul>-->
+                <h2 class="product"><img src="images/product.jpg"/></h2>
+				<a href="#" class="many">更多</a>
+			</div>
+            <div class="zxjBot clearfix">
+          		<a href="#" class="zxj01"><img src="images/zxj01.jpg"/></a>
+            	<div class="rightZxj">
+                    <a href="#" class="a1"><img src="images/zxj02.jpg"/></a>
+                    <a href="#" class="a2"><img src="images/zxj03.jpg"/></a>
+                    <a href="#" class="a3"><img src="images/zxj04.jpg"/></a>
+                    <a href="#" class="a4"><img src="images/zxj05.jpg"/></a>
+                </div>
+            </div>
+           </div>
+		</div>
+</div>
+	<div class="footer clearfix">
+		<div class="innerfooter clearfix">
+			<ul class="about">
+				<li><a href="#">关于集智</a></li>
+				<li><a href="#">品牌入驻</a></li>
+				<li><a href="#">正品保障</a></li>
+				<li><a href="#">友情链接</a></li>
+			</ul>
+			<ul class="new">
+				<li><a href="#">新手指南</a></li>
+				<li><a href="#">新用户注册</a></li>
+				<li><a href="#">如何购买</a></li>
+				<li><a href="#">优惠券使用</a></li>
+			</ul>
+			<ul class="money">
+				<li><a href="#">支付方式</a></li>
+				<li><a href="#">在线支付</a></li>
+				<li><a href="#">银行转账</a></li>
+				<li><a href="#">发票制度</a></li>
+			</ul>
+			<ul class="car">
+				<li><a href="#">配送方式</a></li>
+				<li><a href="#">配送收费标准</a></li>
+				<li><a href="#">货到付款范围</a></li>
+			</ul>
+			<ul class="shou">
+				<li><a href="#">集智售后</a></li>
+				<li><a href="#">退换货政策</a></li>
+				<li><a href="#">如何办理退换货</a></li>
+				<li><a href="#">订单跟踪</a></li>
+			</ul>
+			<ul class="phone">
+				<li><a href="#">客服热线</a></li>
+				<li><a href="#">4006-500-500</a></li>
+			</ul>
+		</div>
+	</div>
+    <p class="shangbiao">© 2003-2015 TMALL.COM 版权所有</p>
+</div>
+	
+	<div class="shopCar"></div>
+ 	<div class="goTop"></div>
+    <script src="js/particles.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
